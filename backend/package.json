@@ -5,8 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
-    "build":"tsc"
+    "start": "vercel dev"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +21,8 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.17.0",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "tsc": "^2.0.4"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
