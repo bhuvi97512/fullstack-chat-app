@@ -29,19 +29,22 @@ app.use(
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
-if(process.env.NODE_ENV === "production") {
-    console.log("Environment: ", process.env.NODE_ENV);
-
-    app.use(express.static(path.join(__dirname, "../Frontend/dist")));
-}
-
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../Frontend/dist/index.html"),function(err) {
-        if(err) {
-            res.status(500).send(err)
-        };
-})
-})
+    res.send("API is running....");
+}   )
+// if(process.env.NODE_ENV === "production") {
+//     console.log("Environment: ", process.env.NODE_ENV);
+
+//     app.use(express.static(path.join(__dirname, "../Frontend/dist")));
+// }
+
+// app.get("/", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../Frontend/dist/index.html"),function(err) {
+//         if(err) {
+//             res.status(500).send(err)
+//         };
+// })
+// })
 
 
 
