@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin: "*",
+        origin: "https://fullstack-chat-app-rust.vercel.app",
         credentials: true,
     })
 );
